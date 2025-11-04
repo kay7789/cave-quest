@@ -10,6 +10,11 @@ class Slash(Action):
         self.damage_bonus = 1
         self.damage_range = (-1, 1)
 
+    #compares a random number against the targets evasion
+    #if number is less then evasion, enemy evaded attack and end the function with a print to console
+    #calculates damage total with user strength, damage bonus, target armor, and a random number
+    #damages target
+    #prints message
     def activate(self, user, target):
         if target.get_evasion() > random.randint(1, 100):
             print(f"{target} evaded the attack!")

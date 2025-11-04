@@ -8,6 +8,7 @@ class Action():
         self.damage_bonus = 1
         self.damage_range = (-1, 1)
 
+    #checks if this action is off cooldown, returns result
     def is_usable(self):
         return self.cooldown == 0
 
