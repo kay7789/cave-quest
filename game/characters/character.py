@@ -1,4 +1,4 @@
-from .. import helper_functions
+from game import helper_functions
 from ..actions import action
 
 print(action)
@@ -10,7 +10,6 @@ class Character():
         self.armor = 0
         self.dexterity = 3
         self.evasion = 0
-
 
 
     def get_health(self):
