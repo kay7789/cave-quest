@@ -4,7 +4,7 @@ import random
 
 class Slash(Action):
     def __init__(self):
-        self.name = "Slash"
+        self.name = "slash"
         self.max_cooldown = 3
         self.cooldown = 0
         self.damage_bonus = 1
@@ -16,6 +16,7 @@ class Slash(Action):
     #damages target
     #prints message
     def activate(self, user, target):
+        self.cooldown = self.max_cooldown
         if target.get_evasion() > random.randint(1, 100):
             print(f"{target} evaded the attack!")
             return
