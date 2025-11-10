@@ -1,8 +1,11 @@
-from character import Character
+from .character import Character
 
 class Enemy(Character):
-    def __init__(self):
-        pass
+    def __init__(self, quest):
+        super().__init__(quest)
 
-    def on_turn_start(self):
-        pass
+    def use_moves(self):
+        for move in self.moves.values():
+            if move.is_usable():
+                self.quest.add_event(move.activate(self, self.quest.player))
+                return

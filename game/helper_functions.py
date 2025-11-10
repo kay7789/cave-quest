@@ -1,4 +1,8 @@
 import math
+import os
 
-def ease_out_circ(x: float) -> float:
-    return math.sqrt(1 - math.pow(x - 1, 2))
+def clear_console():
+    if os.name == 'nt':
+        _ = os.system('cls')
+    else:
+        _ = os.system('clear')

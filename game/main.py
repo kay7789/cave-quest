@@ -1,6 +1,4 @@
-from quest import Quest
-
-
+from .quest import Quest
 
 def main():
     quest = Quest()
